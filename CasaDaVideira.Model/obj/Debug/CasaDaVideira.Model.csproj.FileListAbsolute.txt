@@ -1,0 +1,14 @@
+E:\Documents\Vianna\4º Periodo\ECommerce\CasaDaVideira\CasaDaVideira.Model\obj\Debug\CasaDaVideira.Model.csprojResolveAssemblyReference.cache
+E:\Documents\Vianna\4º Periodo\ECommerce\CasaDaVideira\CasaDaVideira.Model\bin\Debug\CasaDaVideira.Model.dll.config
+E:\Documents\Vianna\4º Periodo\ECommerce\CasaDaVideira\CasaDaVideira.Model\bin\Debug\CasaDaVideira.Model.dll
+E:\Documents\Vianna\4º Periodo\ECommerce\CasaDaVideira\CasaDaVideira.Model\bin\Debug\CasaDaVideira.Model.pdb
+E:\Documents\Vianna\4º Periodo\ECommerce\CasaDaVideira\CasaDaVideira.Model\bin\Debug\Iesi.Collections.dll
+E:\Documents\Vianna\4º Periodo\ECommerce\CasaDaVideira\CasaDaVideira.Model\bin\Debug\MySql.Data.dll
+E:\Documents\Vianna\4º Periodo\ECommerce\CasaDaVideira\CasaDaVideira.Model\bin\Debug\MySql.Web.dll
+E:\Documents\Vianna\4º Periodo\ECommerce\CasaDaVideira\CasaDaVideira.Model\bin\Debug\NHibernate.dll
+E:\Documents\Vianna\4º Periodo\ECommerce\CasaDaVideira\CasaDaVideira.Model\bin\Debug\Iesi.Collections.xml
+E:\Documents\Vianna\4º Periodo\ECommerce\CasaDaVideira\CasaDaVideira.Model\bin\Debug\MySql.Web.xml
+E:\Documents\Vianna\4º Periodo\ECommerce\CasaDaVideira\CasaDaVideira.Model\bin\Debug\NHibernate.xml
+E:\Documents\Vianna\4º Periodo\ECommerce\CasaDaVideira\CasaDaVideira.Model\obj\Debug\CasaDaVideira.Model.dll
+E:\Documents\Vianna\4º Periodo\ECommerce\CasaDaVideira\CasaDaVideira.Model\obj\Debug\CasaDaVideira.Model.pdb
+E:\Documents\Vianna\4º Periodo\ECommerce\CasaDaVideira\CasaDaVideira.Model\obj\Debug\CasaDaVideira.Model.csproj.CoreCompileInputs.cache

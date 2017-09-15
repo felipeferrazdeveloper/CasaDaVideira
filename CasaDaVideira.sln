@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasaDaVideira", "CasaDaVideira\CasaDaVideira.csproj", "{12F31C8B-9DB5-4E77-8D9E-233DD3F80C64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasaDaVideira.Model", "CasaDaVideira.Model\CasaDaVideira.Model.csproj", "{4F520481-F14D-4AF5-A8D7-B0B82F6CD20F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12F31C8B-9DB5-4E77-8D9E-233DD3F80C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12F31C8B-9DB5-4E77-8D9E-233DD3F80C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12F31C8B-9DB5-4E77-8D9E-233DD3F80C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12F31C8B-9DB5-4E77-8D9E-233DD3F80C64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F520481-F14D-4AF5-A8D7-B0B82F6CD20F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F520481-F14D-4AF5-A8D7-B0B82F6CD20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F520481-F14D-4AF5-A8D7-B0B82F6CD20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F520481-F14D-4AF5-A8D7-B0B82F6CD20F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

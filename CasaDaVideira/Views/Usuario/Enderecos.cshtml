@@ -1,0 +1,68 @@
+﻿@model CasaDaVideira.Model.Database.Model.Usuario
+@{
+    ViewBag.Title = "Enderecos";
+}
+
+<h2>Enderecos</h2>
+
+<p>
+    @Html.ActionLink("Inserir", "CriarEndereco", new { id = 0, idUsuario = Model.IdUsuario })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Endereco")
+        </th>
+        <th>
+            @Html.DisplayName("Rua")
+        </th>
+        <th>
+            @Html.DisplayName("Numero")
+        </th>
+        <th>
+            @Html.DisplayName("Complemento")
+        </th>
+        <th>
+            @Html.DisplayName("Bairro")
+        </th>
+        <th>
+            @Html.DisplayName("Cidade")
+        </th>
+        <th>
+            @Html.DisplayName("Cep")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.Enderecos) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdEndereco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rua)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Complemento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bairro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cep)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

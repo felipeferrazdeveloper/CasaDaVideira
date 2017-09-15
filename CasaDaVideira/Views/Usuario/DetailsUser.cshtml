@@ -1,0 +1,70 @@
+﻿@model CasaDaVideira.Model.Database.Model.Usuario
+
+@{
+    ViewBag.Title = "DetailsUser";
+}
+
+<h2>DetailsUser</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+     
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Senha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Senha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sobrenome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sobrenome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cpf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cpf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DtNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DtNascimento)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Telefones", "Telefones")
+    @Html.ActionLink("Enderecos", "Enderecos", new { idEndereco = Model.IdUsuario })
+
+
+</p>

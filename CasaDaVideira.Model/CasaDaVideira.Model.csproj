@@ -54,10 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\Model\Categoria.cs" />
     <Compile Include="Database\Model\Endereco.cs" />
     <Compile Include="Database\Model\Produto.cs" />
     <Compile Include="Database\Model\Telefone.cs" />
     <Compile Include="Database\Model\Usuario.cs" />
+    <Compile Include="Database\Repository\CategoriaRepository.cs" />
     <Compile Include="Database\Repository\EnderecoRepository.cs" />
     <Compile Include="Database\Repository\ProdutoRepository.cs" />
     <Compile Include="Database\Repository\RepositoryBase.cs" />

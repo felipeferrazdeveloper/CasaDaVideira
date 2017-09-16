@@ -26,6 +26,7 @@ namespace CasaDaVideira.Model.Database.Model
             this.Telefones = new List<Telefone>();
             this.Enderecos = new List<Endereco>();
         }
+
         public class UsuarioMap : ClassMapping<Usuario>
         {
             public UsuarioMap()

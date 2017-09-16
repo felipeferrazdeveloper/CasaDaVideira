@@ -34,7 +34,7 @@ public class EnderecoMap : ClassMapping<Endereco>
         Property(x => x.Cidade);
         Property(x => x.Cep);
 
-            ManyToOne(x => x.Usuario, m =>
+        ManyToOne(x => x.Usuario, m =>
         {
             m.Column("idUsuario");
         });

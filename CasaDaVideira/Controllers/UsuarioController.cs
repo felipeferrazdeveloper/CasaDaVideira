@@ -100,6 +100,11 @@ namespace CasaDaVideira.Controllers
             return View("Enderecos", user);
         }
 
+        public ActionResult FazerLogin(string email, string senha)
+        {
+            return View("Index");
+        }
+
         public ActionResult EditarTelefone(int id)
         {
             var tel = DbConfig.Instance.TelefoneRepository.FirstTel(id);

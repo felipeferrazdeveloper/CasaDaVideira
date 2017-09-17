@@ -94,32 +94,46 @@ namespace CasaDaVideira.Controllers
             var user = DbConfig.Instance.UsuarioRepository.FirstUser(idUsuario);
 
             telefone.Usuario = user;
-
-            DbConfig.Instance.TelefoneRepository.Salvar(telefone);
+            try
+            {
+                DbConfig.Instance.TelefoneRepository.Salvar(telefone);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
             
             return View("Enderecos", user);
         }
 
-        public ActionResult FazerLogin(string email, string senha)
-        {
-            return View("Index");
-        }
-
         public ActionResult EditarTelefone(int id)
         {
-            var tel = DbConfig.Instance.TelefoneRepository.FirstTel(id);
-
-            ViewData["IdUsuario"] = tel.Usuario.IdUsuario;
+            Telefone tel;
+            try
+            {
+                tel = DbConfig.Instance.TelefoneRepository.FirstTel(id);
+                ViewData["IdUsuario"] = tel.Usuario.IdUsuario;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            
             return View("CriarTelefone", tel);
 
         }
 
         public ActionResult DeletarTelefone(int id)
         {
-            var tel = DbConfig.Instance.TelefoneRepository.FirstTel(id);
-
-            DbConfig.Instance.TelefoneRepository.Excluir(tel);
-
+            try
+            {
+                var tel = DbConfig.Instance.TelefoneRepository.FirstTel(id);
+                DbConfig.Instance.TelefoneRepository.Excluir(tel);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
             return RedirectToAction("Index");
         }
 
@@ -165,11 +179,48 @@ namespace CasaDaVideira.Controllers
 
         public ActionResult DeletarEndereco(int id)
         {
-            var end = DbConfig.Instance.EnderecoRepository.FirstEnd(id);
-
-            DbConfig.Instance.EnderecoRepository.Excluir(end);
-
+            try
+            {
+                var end = DbConfig.Instance.EnderecoRepository.FirstEnd(id);
+                DbConfig.Instance.EnderecoRepository.Excluir(end);
+            }catch(Exception ex)
+            {
+                throw ex;
+            }
             return RedirectToAction("Index");
         }
+
+        public ActionResult FazerLogin(string email, string senha)
+        {
+            if (email.Equals("administrador@casadavideirajf.com.br"))
+            {
+                var hoje = DateTime.Now;
+                string videira = "VIDEIRA";
+                //A senha será composta por uma Letra maiúscula V-I-D-E-I-R-A
+                //Esta letra será referente ao dia da semana sendo V para domingo e assim por diante
+                //Sequencialmente teremos minutos com 2 digitos numéricos
+                //dia
+                //hora
+                //mes (com um ou dois digitos)
+                //A letra do dia anterior minúscula
+                string password = videira[hoje.DayOfWeek.GetHashCode()].ToString();
+                password += hoje.Minute.ToString();
+                password += hoje.Day.ToString();
+                password += hoje.Hour.ToString();
+                password += hoje.Month.ToString();
+                password += videira[hoje.AddDays(-1).DayOfWeek.GetHashCode()].ToString().ToLower();
+
+                if(senha.Equals(password))
+                    return View("AdminArea");
+            }
+            else
+            {
+                var user = DbConfig.Instance.UsuarioRepository.FindByEmail(email);
+                if (user.Senha.Equals(senha))
+                    return View("Index", user);
+            }
+            return View("Index");
+        }
+
     }
 }

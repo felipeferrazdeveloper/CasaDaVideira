@@ -22,5 +22,11 @@ namespace CasaDaVideira.Model.Database.Repository
 
             return usuario;
         }
+
+        public Usuario FindByEmail(string email)
+        {
+            var user = this.Session.Query<Usuario>().FirstOrDefault(f => f.Email == email);
+            return user;
+        }
     }
 }

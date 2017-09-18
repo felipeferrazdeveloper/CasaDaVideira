@@ -12,3 +12,16 @@ E:\Documents\Vianna\4º Periodo\ECommerce\CasaDaVideira\CasaDaVideira.Model\bin\
 E:\Documents\Vianna\4º Periodo\ECommerce\CasaDaVideira\CasaDaVideira.Model\obj\Debug\CasaDaVideira.Model.dll
 E:\Documents\Vianna\4º Periodo\ECommerce\CasaDaVideira\CasaDaVideira.Model\obj\Debug\CasaDaVideira.Model.pdb
 E:\Documents\Vianna\4º Periodo\ECommerce\CasaDaVideira\CasaDaVideira.Model\obj\Debug\CasaDaVideira.Model.csproj.CoreCompileInputs.cache
+C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\CasaDaVideira.Model.dll.config
+C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\CasaDaVideira.Model.dll
+C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\CasaDaVideira.Model.pdb
+C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\Iesi.Collections.dll
+C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\MySql.Data.dll
+C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\NHibernate.dll
+C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\Iesi.Collections.xml
+C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\MySql.Web.xml
+C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\NHibernate.xml
+C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira.Model\obj\Debug\CasaDaVideira.Model.csprojResolveAssemblyReference.cache
+C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira.Model\obj\Debug\CasaDaVideira.Model.csproj.CoreCompileInputs.cache
+C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira.Model\obj\Debug\CasaDaVideira.Model.dll
+C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira.Model\obj\Debug\CasaDaVideira.Model.pdb

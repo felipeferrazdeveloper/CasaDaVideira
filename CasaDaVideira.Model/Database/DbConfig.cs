@@ -26,7 +26,7 @@ namespace Mvc.Model.Database
         public TelefoneRepository TelefoneRepository { get; set; }
         public EnderecoRepository EnderecoRepository { get; set; }
         public ProdutoRepository ProdutoRepository { get; set; }
-       // public CategoriaRepository CategoriaRepository { get; set; }
+        public CategoriaRepository CategoriaRepository { get; set; }
 
         private DbConfig()
         {
@@ -36,7 +36,7 @@ namespace Mvc.Model.Database
             this.TelefoneRepository = new TelefoneRepository(Session);
             this.EnderecoRepository = new EnderecoRepository(Session);
             this.ProdutoRepository = new ProdutoRepository(Session);
-           // this.CategoriaRepository = new CategoriaRepository(Session);
+            this.CategoriaRepository = new CategoriaRepository(Session);
         }
 
         public static DbConfig Instance
@@ -157,7 +157,7 @@ namespace Mvc.Model.Database
                 var modelMapper = new ModelMapper();
 
                 /*
-                //uma maneirda de add o mapeamento é essa
+                //uma maneira de add o mapeamento é essa
                 modelMapper.AddMapping(TelefoneMap);
                 //pada adicionar outro tipo tem quem adicionar novamente
                 modelMapper.AddMapping(TelefoneMap);
@@ -176,8 +176,7 @@ namespace Mvc.Model.Database
             }
         }
 
-        private void CriarSchemaBanco(string server, string port, string dbName,
-                                      string psw, string user)
+        private void CriarSchemaBanco(string server, string port, string dbName, string psw, string user)
         {
             try
             {

@@ -19,5 +19,10 @@ namespace CasaDaVideira.Controllers
             return View("Index");
         }
 
+        public ActionResult Login()
+        {
+            return View("Login");
+        }
+
     }
 }

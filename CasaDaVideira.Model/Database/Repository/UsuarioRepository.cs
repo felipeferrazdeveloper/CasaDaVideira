@@ -18,15 +18,30 @@ namespace CasaDaVideira.Model.Database.Repository
         }
         public Usuario FirstUser(int idUsuario)
         {
-            var usuario = this.Session.Query<Usuario>().FirstOrDefault(f => f.IdUsuario == idUsuario);
-
-            return usuario;
+            try
+            {
+                var usuario = this.Session.Query<Usuario>().FirstOrDefault(f => f.IdUsuario == idUsuario);
+                return usuario;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            
         }
 
-        public Usuario FindByEmail(string email)
+        public Usuario FindUserByEmail(string email)
         {
-            var user = this.Session.Query<Usuario>().FirstOrDefault(f => f.Email == email);
-            return user;
+            try
+            {
+                var user = this.Session.Query<Usuario>().FirstOrDefault(f => f.Email == email);
+                return user;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            
         }
     }
 }

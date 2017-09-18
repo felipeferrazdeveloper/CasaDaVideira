@@ -160,11 +160,8 @@ namespace CasaDaVideira.Controllers
         public ActionResult GravarEndereco(Endereco endereco, int idUsuario)
         {
             var user = DbConfig.Instance.UsuarioRepository.FirstUser(idUsuario);
-
             endereco.Usuario = user;
-
             DbConfig.Instance.EnderecoRepository.Salvar(endereco);
-
             return RedirectToAction("Index", "Home");
         }
 
@@ -215,7 +212,7 @@ namespace CasaDaVideira.Controllers
             }
             else
             {
-                var user = DbConfig.Instance.UsuarioRepository.FindByEmail(email);
+                var user = DbConfig.Instance.UsuarioRepository.FindUserByEmail(email);
                 if (user.Senha.Equals(senha))
                     return View("Index", user);
             }

@@ -1,4 +1,4 @@
-###################
+﻿###################
 # compiled source #
 ###################
 *.com
@@ -66,6 +66,9 @@ Thumbs.db
 *.user
 *.[Cc]ache
 *[Rr]esharper*
+*.csproj
+*.ide
+
 packages
 NuGet.exe
 _[Ss]cripts
@@ -74,3 +77,8 @@ _[Ss]cripts
 *.nupkg
 *.ncrunchsolution
 *.dot[Cc]over
+*.pdb
+CasaDaVideira/bin/CasaDaVideira.pdb
+*.pdb
+*.cache
+

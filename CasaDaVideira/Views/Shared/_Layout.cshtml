@@ -1,6 +1,4 @@
-﻿
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <title>Super Market an Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | @ViewBag.Title</title>
@@ -51,7 +49,6 @@
                 <ul>
                     <li>@Html.ActionLink("Criar Cadastro", "CreateUser", "Usuario")</li>
                     <li>@Html.ActionLink("Login", "Login", "Home")</li>
-                    <li><a href="contact.html">Help</a></li>
                 </ul>
             </div>
             <div class="product_list_header">
@@ -69,12 +66,12 @@
         <div class="container">
             <div class="w3ls_logo_products_left1">
                 <ul class="phone_email">
-                    <li><i class="fa fa-phone" aria-hidden="true"></i>Order online or call us : (+0123) 234 567</li>
-
+                    <li><i class="fa fa-phone" aria-hidden="true"></i><b>Venha nos conhecer</b><br/>
+                        agende sua visita : +55 (32) 9 9950 1253</li>
                 </ul>
             </div>
             <div class="w3ls_logo_products_left">
-                <h1>@Html.ActionLink("Super Market", "Index", "Home")</h1>
+                <h1>@Html.ActionLink("Casa da Videira", "Index", "Home")</h1>
             </div>
             <div class="w3l_search">
                 <form action="#" method="post">
@@ -105,7 +102,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html" class="act">Home</a></li>
+                        <li class="active">@Html.ActionLink("Home", "Index", "Home", htmlAttributes: new { @class ="act"})</li>
                         <!-- Mega Menu -->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Groceries<b class="caret"></b></a>
@@ -122,7 +119,6 @@
                                             <li><a href="groceries.html">Rice & Rice Products</a></li>
                                         </ul>
                                     </div>
-
                                 </div>
                             </ul>
                         </li>
@@ -141,8 +137,6 @@
                                             <li><a href="household.html">Kitchenware</a></li>
                                         </ul>
                                     </div>
-
-
                                 </div>
                             </ul>
                         </li>
@@ -161,7 +155,6 @@
                                             <li><a href="personalcare.html">Diapers & Wipes</a></li>
                                         </ul>
                                     </div>
-
                                 </div>
                             </ul>
                         </li>
@@ -180,8 +173,6 @@
                                             <li><a href="packagedfoods.html">Chocolates & Sweets</a></li>
                                         </ul>
                                     </div>
-
-
                                 </div>
                             </ul>
                         </li>
@@ -200,7 +191,6 @@
                                             <li><a href="beverages.html">Tea Bags</a></li>
                                         </ul>
                                     </div>
-
                                 </div>
                             </ul>
                         </li>
@@ -263,7 +253,7 @@
         <div class="footer-copy">
 
             <div class="container">
-                <p>© 2017 Super Market. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+                <p>© 2017 Casa da Videira. All rights reserved</p>
             </div>
         </div>
 

@@ -15,7 +15,7 @@ namespace CasaDaVideira.Model.Database.Model
         public virtual string Descricao { get; set; }
         public virtual double Preco { get; set; }
         public virtual string Qtd { get; set; }
-        public virtual Categoria Categoria { get; set; }
+        //public virtual Categoria Categoria { get; set; }
     }
 
     public class ProdutoMap : ClassMapping<Produto>
@@ -29,7 +29,11 @@ namespace CasaDaVideira.Model.Database.Model
             Property(x => x.Descricao);
             Property(x => x.Preco);
             Property(x => x.Qtd);
-            Property(x => x.Categoria);           
+
+            //Property(x => x.Categoria);      
+            
+
+
         }
     }
 }

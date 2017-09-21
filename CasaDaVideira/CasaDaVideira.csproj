@@ -150,6 +150,7 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Config\DbConfig.ini" />
     <None Include="Scripts\jquery-1.11.1.intellisense.js" />
     <Content Include="Icon.png" />
     <Content Include="images\1.png" />

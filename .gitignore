@@ -1,4 +1,4 @@
-###################
+﻿###################
 # compiled source #
 ###################
 *.com
@@ -9,6 +9,7 @@
 *.dll.config
 *.cache
 *.suo
+*.ide
 # Include dlls if they’re in the NuGet packages directory
 !/packages/*/lib/*.dll
 !/packages/*/lib/*/*.dll
@@ -65,6 +66,9 @@ Thumbs.db
 *.user
 *.[Cc]ache
 *[Rr]esharper*
+*.csproj
+*.ide
+
 packages
 NuGet.exe
 _[Ss]cripts
@@ -77,3 +81,4 @@ _[Ss]cripts
 CasaDaVideira/bin/CasaDaVideira.pdb
 *.pdb
 *.cache
+

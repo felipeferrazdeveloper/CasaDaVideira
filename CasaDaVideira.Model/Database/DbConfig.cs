@@ -1,4 +1,6 @@
 ﻿using CasaDaVideira.Model.Database.Repository;
+using IniParser;
+using IniParser.Model;
 using MySql.Data.MySqlClient;
 using NHibernate;
 using NHibernate.Cfg;
@@ -26,7 +28,7 @@ namespace Mvc.Model.Database
         public TelefoneRepository TelefoneRepository { get; set; }
         public EnderecoRepository EnderecoRepository { get; set; }
         public ProdutoRepository ProdutoRepository { get; set; }
-        public CategoriaRepository CategoriaRepository { get; set; }
+        //public CategoriaRepository CategoriaRepository { get; set; }
 
         private DbConfig()
         {
@@ -36,7 +38,7 @@ namespace Mvc.Model.Database
             this.TelefoneRepository = new TelefoneRepository(Session);
             this.EnderecoRepository = new EnderecoRepository(Session);
             this.ProdutoRepository = new ProdutoRepository(Session);
-            this.CategoriaRepository = new CategoriaRepository(Session);
+            //this.CategoriaRepository = new CategoriaRepository(Session);
         }
 
         public static DbConfig Instance
@@ -50,16 +52,55 @@ namespace Mvc.Model.Database
                 return _instance;
             }
         }
+
+        public IniData LerArquivoIni()
+        {
+            try
+            {
+                var dir = System.Environment.CurrentDirectory;
+                var file = dir + "/Config/DbConfig.ini";
+                if (HttpContext.Current != null)
+                {
+                    file = HttpContext.Current.Server.MapPath("/Config/DbConfig.ini").Replace("\\", "/");
+                }
+
+                if (!System.IO.File.Exists(file))
+                {
+                    throw new Exception("Arquivo de configuração não existe!");
+                }
+
+                var parser = new FileIniDataParser();
+
+                return parser.ReadFile(file);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Não deu pra ler o arquivo .ini", ex);
+            }
+        }
+
         private void Conectar()
         {
             try
             {
-                var stringConexao = "Persist Security Info=True;"
-                                    + "server=localhost;"
-                                    + "port=3308;"
-                                    + "database=casadavideira;"
-                                    + "uid=root;"
-                                    + "pwd=";
+                var iniFile = LerArquivoIni();
+
+                var host = iniFile["DbConfig"]["host"];
+                var port = iniFile["DbConfig"]["port"];
+                var db = iniFile["DbConfig"]["db"];
+                var user = iniFile["DbConfig"]["user"];
+                var pwd = iniFile["DbConfig"]["pwd"];
+
+
+
+                var stringConexao = "Persist Security Info=True;" +
+                                    "server=" + host + ";" +
+                                    "port=" + port + ";" +
+                                    "database=" + db + ";" +
+                                    "uid=" + user + ";" +
+                                    "pwd=" + pwd;
+            
 
                 var mysql = new MySqlConnection(stringConexao);
                 try

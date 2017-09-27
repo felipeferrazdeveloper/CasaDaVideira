@@ -1,6 +1,4 @@
 ﻿using CasaDaVideira.Model.Database.Repository;
-using IniParser;
-using IniParser.Model;
 using MySql.Data.MySqlClient;
 using NHibernate;
 using NHibernate.Cfg;
@@ -8,11 +6,7 @@ using NHibernate.Cfg.MappingSchema;
 using NHibernate.Context;
 using NHibernate.Mapping.ByCode;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 using static CasaDaVideira.Model.Database.Model.Usuario;
 
@@ -53,54 +47,54 @@ namespace Mvc.Model.Database
             }
         }
 
-        public IniData LerArquivoIni()
-        {
-            try
-            {
-                var dir = System.Environment.CurrentDirectory;
-                var file = dir + "/Config/DbConfig.ini";
-                if (HttpContext.Current != null)
-                {
-                    file = HttpContext.Current.Server.MapPath("/Config/DbConfig.ini").Replace("\\", "/");
-                }
+        //public IniData LerArquivoIni()
+        //{
+        //    try
+        //    {
+        //        var dir = System.Environment.CurrentDirectory;
+        //        var file = dir + "/Config/DbConfig.ini";
+        //        if (HttpContext.Current != null)
+        //        {
+        //            file = HttpContext.Current.Server.MapPath("/Config/DbConfig.ini").Replace("\\", "/");
+        //        }
 
-                if (!System.IO.File.Exists(file))
-                {
-                    throw new Exception("Arquivo de configuração não existe!");
-                }
+        //        if (!System.IO.File.Exists(file))
+        //        {
+        //            throw new Exception("Arquivo de configuração não existe!");
+        //        }
 
-                var parser = new FileIniDataParser();
+        //        var parser = new FileIniDataParser();
 
-                return parser.ReadFile(file);
+        //        return parser.ReadFile(file);
 
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Não deu pra ler o arquivo .ini", ex);
-            }
-        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new Exception("Não deu pra ler o arquivo .ini", ex);
+        //    }
+        //}
 
         private void Conectar()
         {
             try
             {
-                var iniFile = LerArquivoIni();
+                //var iniFile = LerArquivoIni();
 
-                var host = iniFile["DbConfig"]["host"];
-                var port = iniFile["DbConfig"]["port"];
-                var db = iniFile["DbConfig"]["db"];
-                var user = iniFile["DbConfig"]["user"];
-                var pwd = iniFile["DbConfig"]["pwd"];
+                //var host = iniFile["DbConfig"]["host"];
+                //var port = iniFile["DbConfig"]["port"];
+                //var db = iniFile["DbConfig"]["db"];
+                //var user = iniFile["DbConfig"]["user"];
+                //var pwd = iniFile["DbConfig"]["pwd"];
 
 
 
-                var stringConexao = "Persist Security Info=True;" +
-                                    "server=" + host + ";" +
-                                    "port=" + port + ";" +
-                                    "database=" + db + ";" +
-                                    "uid=" + user + ";" +
-                                    "pwd=" + pwd;
-            
+                var stringConexao = "Persist Security Info=True;"
+                                    + "server=localhost;"
+                                    + "port=3308;"
+                                    + "database=casadavideira;"
+                                    + "uid=root;"
+                                    + "pwd=";
+
 
                 var mysql = new MySqlConnection(stringConexao);
                 try

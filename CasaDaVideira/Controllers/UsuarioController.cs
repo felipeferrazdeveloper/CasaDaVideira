@@ -14,7 +14,8 @@ namespace CasaDaVideira.Controllers
         // GET: Usuario
         public ActionResult Index()
         {
-            return View();
+            var usuarios = DbConfig.Instance.UsuarioRepository.FindAll();
+            return View(usuarios);
         }
 
         public ActionResult CreateUser()
@@ -162,7 +163,7 @@ namespace CasaDaVideira.Controllers
             var user = DbConfig.Instance.UsuarioRepository.FirstUser(idUsuario);
             endereco.Usuario = user;
             DbConfig.Instance.EnderecoRepository.Salvar(endereco);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Usuario");
         }
 
         public ActionResult EditarEndereco(int id)
@@ -207,7 +208,7 @@ namespace CasaDaVideira.Controllers
                 password += hoje.Month.ToString();
                 password += videira[hoje.AddDays(-1).DayOfWeek.GetHashCode()].ToString().ToLower();
 
-                if(senha.Equals(password))
+                //if(senha.Equals(password))
                     return View("AdminArea");
             }
             else

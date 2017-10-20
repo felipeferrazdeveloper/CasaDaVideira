@@ -15,7 +15,7 @@ namespace CasaDaVideira.Model.Database.Repository
         {
 
         }
-        public Produto FirstProduto(int idProduto)
+        public Produto FirstProduto(Guid idProduto)
         {
             var produto = this.Session.Query<Produto>().FirstOrDefault(f => f.IdProduto == idProduto);
 

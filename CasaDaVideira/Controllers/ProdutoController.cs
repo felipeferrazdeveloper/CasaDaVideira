@@ -1,11 +1,7 @@
-﻿using CasaDaVideira.Model.Database.Model;
-using Mvc.Model.Database;
-using NHibernate;
-using NHibernate.Linq;
+﻿using CasaDaVideira.Model.Database;
+using CasaDaVideira.Model.Database.Model;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace CasaDaVideira.Controllers
@@ -26,14 +22,14 @@ namespace CasaDaVideira.Controllers
             return View(prod);
         }
 
-        public ActionResult EditProduto(int idProduto)
+        public ActionResult EditProduto(Guid idProduto)
         {
             var prod = DbConfig.Instance.ProdutoRepository.FindAll().FirstOrDefault(f => f.IdProduto == idProduto);
 
             return View("CreateProduto", prod);
         }
 
-        public ActionResult DeleteProduto(int idProduto)
+        public ActionResult DeleteProduto(Guid idProduto)
         {
             var prod = DbConfig.Instance.ProdutoRepository.FindAll().FirstOrDefault(f => f.IdProduto == idProduto);
 
@@ -42,7 +38,7 @@ namespace CasaDaVideira.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult DetailsProduto(int idProduto)
+        public ActionResult DetailsProduto(Guid idProduto)
         {
             var prod = DbConfig.Instance.ProdutoRepository
                     .FindAll().FirstOrDefault(f => f.IdProduto == idProduto);
@@ -64,11 +60,10 @@ namespace CasaDaVideira.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
-
             var prod = DbConfig.Instance.ProdutoRepository.FindAll().Where(f => f.Nome.ToLower().Contains(buscaP.ToLower()));
-
             return View("Index", prod);
         }
+
         //public ActionResult Categoria(int idCategoria)
         //{
         //    var cat = DbConfig.Instance.CategoriaRepository.FirstCategoria(idCategoria);

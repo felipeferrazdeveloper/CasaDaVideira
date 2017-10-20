@@ -25,3 +25,17 @@ C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira.Model\obj\Debug\Cas
 C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira.Model\obj\Debug\CasaDaVideira.Model.csproj.CoreCompileInputs.cache
 C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira.Model\obj\Debug\CasaDaVideira.Model.dll
 C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira.Model\obj\Debug\CasaDaVideira.Model.pdb
+C:\Projects\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\CasaDaVideira.Model.dll.config
+C:\Projects\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\CasaDaVideira.Model.dll
+C:\Projects\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\CasaDaVideira.Model.pdb
+C:\Projects\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\Iesi.Collections.dll
+C:\Projects\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\MySql.Data.dll
+C:\Projects\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\NHibernate.dll
+C:\Projects\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\Iesi.Collections.xml
+C:\Projects\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\NHibernate.xml
+C:\Projects\GitHub\CasaDaVideira\CasaDaVideira.Model\obj\Debug\CasaDaVideira.Model.csprojResolveAssemblyReference.cache
+C:\Projects\GitHub\CasaDaVideira\CasaDaVideira.Model\obj\Debug\CasaDaVideira.Model.csproj.CoreCompileInputs.cache
+C:\Projects\GitHub\CasaDaVideira\CasaDaVideira.Model\obj\Debug\CasaDaVideira.Model.dll
+C:\Projects\GitHub\CasaDaVideira\CasaDaVideira.Model\obj\Debug\CasaDaVideira.Model.pdb
+C:\Projects\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\INIFileParser.dll
+C:\Projects\GitHub\CasaDaVideira\CasaDaVideira.Model\bin\Debug\INIFileParser.xml

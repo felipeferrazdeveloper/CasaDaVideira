@@ -11,7 +11,7 @@ namespace CasaDaVideira.Model.Database.Model
     public class Telefone
     {
 
-        public virtual int Id { get; set; }
+        public virtual Guid Id { get; set; }
         public virtual string Ddd { get; set; }
         public virtual string Numero { get; set; }
         public virtual string Tipo { get; set; }
@@ -23,7 +23,7 @@ namespace CasaDaVideira.Model.Database.Model
     {
         public TelefoneMap()
         {
-            Id(x => x.Id, m => m.Generator(Generators.Identity));
+            Id(x => x.Id, m => m.Generator(Generators.Guid));
 
             Property(x => x.Ddd);
             Property(x => x.Numero);

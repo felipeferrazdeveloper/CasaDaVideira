@@ -1,10 +1,5 @@
 ﻿using CasaDaVideira.Model.Database;
-using CasaDaVideira.Model.Database.Model;
-using Mvc.Model.Database;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace CasaDaVideira.Controllers
@@ -14,16 +9,17 @@ namespace CasaDaVideira.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            //var usuarios = DbConfig.Instance.UsuarioRepository.FindAll();
+            var usuarios = DbConfig.Instance.UsuarioRepository.FindAll();
 
-            return View("Index");
+            return View();
         }
 
+        [AllowAnonymous]
         public ActionResult Login()
         {
-
-            return View("Login");
+            var existeAdmin = DbConfig.Instance.UsuarioRepository.FindAll().Where(w => w.Admin).FirstOrDefault();
+            ViewBag.ExisteAdmin = existeAdmin == null ? false : true;
+            return View();
         }
-
     }
 }

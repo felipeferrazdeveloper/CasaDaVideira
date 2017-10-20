@@ -1,15 +1,16 @@
 ﻿@model CasaDaVideira.Model.Database.Model.Usuario
 
 @{
-    ViewBag.Title = "CreateUser";
+    ViewBag.Title = "Cadastro";
 }
 
 <h2>Cadastrar usuario</h2>
 
-@using (Html.BeginForm("GravarUsuario", "Usuario", FormMethod.Post)) 
+@using (Html.BeginForm("GravarUsuario", "Usuario", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
-    
+    @Html.HiddenFor(model => model.Admin)
+    @Html.HiddenFor(model => model.IdUsuario)
     <div class="form-horizontal">
         <h4>Usuario</h4>
         <hr />
@@ -63,15 +64,11 @@
                 @Html.ValidationMessageFor(model => model.DtNascimento, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        @{ var valor = Model == null ? "Adicionar" : "Alterar"; }
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value=@valor class="btn btn-default" />
             </div>
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>

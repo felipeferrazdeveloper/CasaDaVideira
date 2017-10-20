@@ -1,0 +1,32 @@
+﻿@using Mvc.Model.Utils
+
+@{
+    var usuario = LoginUtils.Usuario;
+}
+
+@if (usuario == null)
+{
+    <li>@Html.ActionLink("Criar Cadastro", "CreateUser", "Usuario")</li>
+    <li>@Html.ActionLink("Login", "Login", "Home")</li>
+}
+else
+{
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">@usuario.Nome<b class="caret"></b></a>
+        <ul class="dropdown-menu multi-column columns-3">
+            <div class="row">
+                <div class="multi-gd-img">
+                    <ul class="multi-column-dropdown">
+                        <h6>Opções</h6>
+                        <li><a href="groceries.html">Editar Cadastro</a></li>
+                        <li>@Html.ActionLink("Sair", "Deslogar", "Usuario");</li>
+                        @*<li><a href="groceries.html">Cashews</a></li>
+                        <li><a href="groceries.html">Dry Fruit</a></li>
+                        <li><a href="groceries.html"> Mukhwas </a></li>
+                        <li><a href="groceries.html">Rice & Rice Products</a></li>*@
+                    </ul>
+                </div>
+            </div>
+        </ul>
+    </li>
+}

@@ -16,7 +16,7 @@ namespace CasaDaVideira.Model.Database.Repository
         {
 
         }
-        public Usuario FirstUser(int idUsuario)
+        public Usuario FirstUser(Guid idUsuario)
         {
             try
             {
@@ -29,7 +29,18 @@ namespace CasaDaVideira.Model.Database.Repository
             }
             
         }
-
+        public Usuario GetUserByLoginAndPassword(string login, string password)
+        {
+            try
+            {
+                var user = this.Session.Query<Usuario>().FirstOrDefault(f => f.Email == login && f.Senha == password);
+                return user;
+            }catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+        
         public Usuario FindUserByEmail(string email)
         {
             try
@@ -42,6 +53,11 @@ namespace CasaDaVideira.Model.Database.Repository
                 throw ex;
             }
             
+        }
+
+        public Usuario Buscar(string email, string senha)
+        {
+            return this.Session.Query<Usuario>().FirstOrDefault(f => f.Senha == senha && f.Email == email);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace CasaDaVideira.Model.Database.Model
 {
     public class Produto
     {
-        public virtual int IdProduto { get; set; }
+        public virtual Guid IdProduto { get; set; }
         public virtual string Nome { get; set; }
         public virtual string Descricao { get; set; }
         public virtual double Preco { get; set; }
@@ -23,7 +23,7 @@ namespace CasaDaVideira.Model.Database.Model
         public ProdutoMap()
         {
             //esta mapeando uma primarykey
-            Id(x => x.IdProduto, m => m.Generator(Generators.Identity));
+            Id(x => x.IdProduto, m => m.Generator(Generators.Guid));
 
             Property(x => x.Nome);
             Property(x => x.Descricao);

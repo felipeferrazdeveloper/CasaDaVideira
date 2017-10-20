@@ -10,7 +10,7 @@
 //{
 //    public class Categoria
 //    {
-//        public virtual int IdCategoria { get; set; }
+//        public virtual Guid IdCategoria { get; set; }
 //        public virtual string Nome { get; set; }
 //        public virtual IList<Produto> Produtos { get; set; }
 //    }
@@ -19,7 +19,7 @@
 //    {
 //        public CategoriaMap()
 //        {
-//            Id(x => x.IdCategoria, m => m.Generator(Generators.Identity));
+//            Id(x => x.IdCategoria, m => m.Generator(Generators.Guid));
 
 //            Property(x => x.Nome);
                        

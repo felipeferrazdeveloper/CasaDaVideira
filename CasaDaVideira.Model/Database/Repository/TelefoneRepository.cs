@@ -16,7 +16,7 @@ namespace CasaDaVideira.Model.Database.Repository
 
         }
 
-        public Telefone FirstTel(int idTelefone)
+        public Telefone FirstTel(Guid idTelefone)
         {
             var tel = this.Session.Query<Telefone>().FirstOrDefault(f => f.Id == idTelefone);
 

@@ -23,7 +23,7 @@ namespace CasaDaVideira.Model.Database
         public TelefoneRepository TelefoneRepository { get; set; }
         public ProdutoRepository ProdutoRepository { get; set; }
         public EnderecoRepository EnderecoRepository { get; set; }
-
+        public CategoriaRepository CategoriaRepository { get; set; }
         private DbConfig()
         {
             Conectar();
@@ -31,6 +31,7 @@ namespace CasaDaVideira.Model.Database
             this.TelefoneRepository = new TelefoneRepository(Session);
             this.ProdutoRepository = new ProdutoRepository(Session);
             this.EnderecoRepository = new EnderecoRepository(Session);
+            this.CategoriaRepository = new CategoriaRepository(Session);
         }
 
         public static DbConfig Instance

@@ -67,6 +67,7 @@ namespace CasaDaVideira.Controllers
         [AllowAnonymous]
         public ActionResult GravarUsuario(Usuario user)
         {
+            //user.DtNascimento = DateTime.Now;
             DbConfig.Instance.UsuarioRepository.Salvar(user);
             LoginUtils.Logar(user.Email, user.Senha);
             return RedirectToAction("Index", "Home");
@@ -240,7 +241,7 @@ namespace CasaDaVideira.Controllers
                 {
                     LoginUtils.Logar(user.Email, user.Senha);
 
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Index", "Home");
                 }
                 catch (Exception ex)
                 {

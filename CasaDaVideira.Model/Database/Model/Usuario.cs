@@ -51,7 +51,7 @@ namespace CasaDaVideira.Model.Database.Model
                 Property(x => x.DtNascimento, m =>
                 {
                     m.Type(NHibernateUtil.Date);
-                    m.NotNullable(true);
+                    m.NotNullable(false);
                 });
                 Property(x => x.UltimoAcesso, m =>
                 {

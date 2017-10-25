@@ -106,8 +106,6 @@ C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira\obj\Debug\CasaDaVid
 C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira\obj\Debug\CasaDaVideira.csproj.CoreCompileInputs.cache
 C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira\obj\Debug\CasaDaVideira.dll
 C:\Users\Felipe\Documents\GitHub\CasaDaVideira\CasaDaVideira\obj\Debug\CasaDaVideira.pdb
-C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\obj\Debug\CasaDaVideira.csprojResolveAssemblyReference.cache
-C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\obj\Debug\CasaDaVideira.csproj.CoreCompileInputs.cache
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\ApplicationInsights.config
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\roslyn\csc.exe
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -126,6 +124,7 @@ C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\CasaDaVideira.dll
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\CasaDaVideira.pdb
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\CasaDaVideira.Model.dll
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\Iesi.Collections.dll
+C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\INIFileParser.dll
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\Microsoft.AI.DependencyCollector.dll
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -146,6 +145,7 @@ C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\System.Web.Webpages.Razor.dll
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\CasaDaVideira.Model.pdb
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\CasaDaVideira.Model.dll.config
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\Iesi.Collections.xml
+C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\INIFileParser.xml
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\Microsoft.AI.DependencyCollector.xml
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\Microsoft.AI.Web.xml
@@ -159,7 +159,7 @@ C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\System.Web.Webpages.Deploymen
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\System.Web.Webpages.Razor.xml
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\System.Web.Helpers.xml
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\System.Web.Mvc.xml
+C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\obj\Debug\CasaDaVideira.csprojResolveAssemblyReference.cache
+C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\obj\Debug\CasaDaVideira.csproj.CoreCompileInputs.cache
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\obj\Debug\CasaDaVideira.dll
 C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\obj\Debug\CasaDaVideira.pdb
-C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\INIFileParser.dll
-C:\Projects\GitHub\CasaDaVideira\CasaDaVideira\bin\INIFileParser.xml

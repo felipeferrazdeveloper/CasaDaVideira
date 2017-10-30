@@ -8,7 +8,6 @@ using System.Web.Mvc;
 
 namespace CasaDaVideira.Controllers
 {
-    [Authorize]
     public class UsuarioController : Controller
     {
         // GET: Usuario
@@ -56,10 +55,9 @@ namespace CasaDaVideira.Controllers
 
         }
 
-        public ActionResult DetailsUser(Guid idUsuario)
+        public ActionResult DetailsUser()
         {
-            var user = DbConfig.Instance.UsuarioRepository
-                    .FindAll().FirstOrDefault(f => f.IdUsuario == idUsuario);
+            var user = LoginUtils.Usuario;
 
             return View(user);
         }
@@ -135,9 +133,7 @@ namespace CasaDaVideira.Controllers
             {
                 throw ex;
             }
-            
             return View("CriarTelefone", tel);
-
         }
 
         public ActionResult DeletarTelefone(Guid id)
@@ -207,6 +203,8 @@ namespace CasaDaVideira.Controllers
         [AllowAnonymous]
         public ActionResult FazerLogin(string email, string senha)
         {
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(senha))
+                return RedirectToAction("Login", "Home");
             var iniFile = IniUtils.LerArquivoIni();
             if (email.Equals(iniFile["AdminFirstUser"]["key"]) && senha.Equals(iniFile["AdminFirstUser"]["password"]))
             {
@@ -225,22 +223,21 @@ namespace CasaDaVideira.Controllers
                 //password += hoje.Hour.ToString();
                 //password += hoje.Month.ToString();
                 //password += videira[hoje.AddDays(-1).DayOfWeek.GetHashCode()].ToString().ToLower();
-          
-                var us = new Usuario();
-                
-                us.Nome = "Administrador";
-                us.Email = "meu@email.com";
-                us.Senha = "123123";
-                us.Admin = true;
+
+                var us = new Usuario
+                {
+                    Nome = "Administrador",
+                    Email = "meu@email.com",
+                    Senha = "123123",
+                    Admin = true
+                };
                 return View("CreateUser", us);
             }
             else
             {
-                var user = DbConfig.Instance.UsuarioRepository.Buscar(email, senha);
                 try
                 {
-                    LoginUtils.Logar(user.Email, user.Senha);
-
+                    LoginUtils.Logar(email, senha);
                     return RedirectToAction("Index", "Home");
                 }
                 catch (Exception ex)
@@ -250,7 +247,6 @@ namespace CasaDaVideira.Controllers
             }
         }
 
-        [AllowAnonymous]
         public ActionResult Deslogar(Usuario user)
         {
             LoginUtils.Deslogar();

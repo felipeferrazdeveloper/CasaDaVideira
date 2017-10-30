@@ -34,8 +34,6 @@ namespace Mvc.Model.Utils
                 var usuario = DbConfig.Instance.UsuarioRepository.Buscar(login, senha);
 
                 Usuario = usuario ?? throw new Exception("Usuario não encontrado!");
-                
-                //HttpContext.Current.Session["Usuario"] = usuario;
 
                 FormsAuthentication.SetAuthCookie(usuario.Email, true);
 
@@ -52,13 +50,11 @@ namespace Mvc.Model.Utils
             try
             {
                 Usuario = null;
-                //HttpContext.Current.Session["Usuario"] = null;
-                //HttpContext.Current.Session.Remove("Usuario");
+                _usuario = null;
                 FormsAuthentication.SignOut();
             }
             catch (Exception ex)
             {
-
                 throw new Exception("Não foi possível deslogar!", ex);
             }
         }

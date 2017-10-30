@@ -3,6 +3,7 @@ using NHibernate.Mapping.ByCode;
 using NHibernate.Mapping.ByCode.Conformist;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,10 +13,15 @@ namespace CasaDaVideira.Model.Database.Model
     public class Usuario
     {
         public virtual Guid IdUsuario { get; set; }
+        [Required(ErrorMessage = "Email é obrigatorio", AllowEmptyStrings = false)]
         public virtual string Email { get; set; }
+        [Required(ErrorMessage = "Senha é obrigatorio", AllowEmptyStrings = false)]
         public virtual string Senha { get; set; }
+        [Required(ErrorMessage = "Nome é obrigatorio", AllowEmptyStrings = false)]
         public virtual string Nome { get; set; }
+        [Required(ErrorMessage = "Sobrenome é obrigatorio", AllowEmptyStrings = false)]
         public virtual string Sobrenome { get; set; }
+        [Required(ErrorMessage = "CPF é obrigatorio", AllowEmptyStrings = false)]
         public virtual string Cpf { get; set; }
         public virtual int Pontos { get; set; }
         public virtual DateTime DtNascimento { get; set; }
@@ -37,11 +43,26 @@ namespace CasaDaVideira.Model.Database.Model
                 //esta mapeando uma primarykey
                 Id(x => x.IdUsuario, m => m.Generator(Generators.Guid));
 
-                Property(x => x.Email);
-                Property(x => x.Senha);
-                Property(x => x.Nome);
-                Property(x => x.Sobrenome);
-                Property(x => x.Cpf);
+                Property(x => x.Email, m =>
+                {
+                    m.NotNullable(true);
+                });
+                Property(x => x.Senha, m =>
+                {
+                    m.NotNullable(true);
+                });
+                Property(x => x.Nome, m =>
+                {
+                    m.NotNullable(true);
+                });
+                Property(x => x.Sobrenome, m =>
+                {
+                    m.NotNullable(true);
+                });
+                Property(x => x.Cpf, m =>
+                {
+                    m.NotNullable(true);
+                });
                 Property(x => x.Pontos);
                 Property(x => x.Admin, m =>
                 {

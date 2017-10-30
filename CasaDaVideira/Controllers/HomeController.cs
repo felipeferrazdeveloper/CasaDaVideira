@@ -9,8 +9,6 @@ namespace CasaDaVideira.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            var usuarios = DbConfig.Instance.UsuarioRepository.FindAll();
-
             return View();
         }
 

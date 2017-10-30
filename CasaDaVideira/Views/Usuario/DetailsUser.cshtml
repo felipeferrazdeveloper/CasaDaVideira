@@ -1,70 +1,41 @@
 ﻿@model CasaDaVideira.Model.Database.Model.Usuario
 
 @{
-    ViewBag.Title = "DetailsUser";
+    ViewBag.Title = "Detalhes";
+    var tipo = Model.Admin ? "Administrador" : "Cliente";
 }
 
-<h2>DetailsUser</h2>
+<h2>Detalhes de @Model.Nome  @Model.Sobrenome</h2>
 
 <div>
-    <h4>Usuario</h4>
+    <h4>@tipo</h4>
     <hr />
-    <dl class="dl-horizontal">
-     
         
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
+            @Html.LabelFor(model => model.Email) 
+            @Html.EditorFor(model => model.Email)
+        
             @Html.DisplayNameFor(model => model.Senha)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Senha)
-        </dd>
-
-        <dt>
+    
+            @Html.EditorFor(model => model.Senha)
+        
             @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-
-        <dt>
+        
+            @Html.EditorFor(model => model.Nome)
+        
             @Html.DisplayNameFor(model => model.Sobrenome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Sobrenome)
-        </dd>
-
-        <dt>
+        
+            @Html.EditorFor(model => model.Sobrenome)
+        
             @Html.DisplayNameFor(model => model.Cpf)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Cpf)
-        </dd>
-
-        <dt>
+       
+            @Html.EditorFor(model => model.Cpf)
+        
             @Html.DisplayNameFor(model => model.DtNascimento)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DtNascimento)
-        </dd>
-
-    </dl>
+        
+            @Html.EditorFor(model => model.DtNascimento)
+       
 </div>
 <p>
     @Html.ActionLink("Telefones", "Telefones")
     @Html.ActionLink("Enderecos", "Enderecos", new { idEndereco = Model.IdUsuario })
-
-
 </p>

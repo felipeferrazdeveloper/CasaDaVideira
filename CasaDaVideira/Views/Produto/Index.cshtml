@@ -1,13 +1,17 @@
 ﻿@model IEnumerable<CasaDaVideira.Model.Database.Model.Produto>
-
+@using Mvc.Model.Utils
 @{
     ViewBag.Title = "Index";
+    var usuario = LoginUtils.Usuario;
 }
 
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Cadastrar", "CreateProduto")
+    @if (usuario != null && usuario.Admin)
+    {
+        @Html.ActionLink("Cadastrar", "CreateProduto")
+    }    
 </p>
 <table class="table">
     <tr>
@@ -42,11 +46,14 @@
         <td>
             @Html.DisplayFor(modelItem => item.Qtd)
         </td>
+@if (usuario != null && usuario.Admin)
+{
         <td>
             @Html.ActionLink("Editar", "EditProduto", new { idProduto = item.IdProduto }) |
             @Html.ActionLink("Detalhe", "DetailsProduto", new { idProduto = item.IdProduto }) |
             @Html.ActionLink("Apagar", "DeleteProduto", new { idProduto = item.IdProduto })
         </td>
+}
     </tr>
 }
 

@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\Model\Carrinho.cs" />
     <Compile Include="Database\Model\Categoria.cs" />
     <Compile Include="Database\Model\Endereco.cs" />
     <Compile Include="Database\Model\Produto.cs" />

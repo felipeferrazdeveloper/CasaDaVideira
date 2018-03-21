@@ -13,18 +13,19 @@ namespace CasaDaVideira.Model.Database.Model
         public virtual Guid IdProduto { get; set; }
         public virtual string Nome { get; set; }
         public virtual string Descricao { get; set; }
-        public virtual double Preco
-        {
-            get
-            {
-                return this.Preco;
-            }
-            set
-            {
-                this.PrecoAntigo = this.Preco;
-                this.Preco = value;
-            }
-        }
+        //public virtual double Preco
+        //{
+        //    get
+        //    {
+        //        return this.Preco;
+        //    }
+        //    set
+        //    {
+        //        this.PrecoAntigo = this.Preco;
+        //        this.Preco = value;
+        //    }
+        //}
+        public virtual double Preco { get; set; }
         public virtual int Qtd { get; set; }
         public virtual double PrecoAntigo { get; set; }
         public virtual Categoria Categoria { get; set; }
@@ -50,7 +51,9 @@ namespace CasaDaVideira.Model.Database.Model
             Property(x => x.Imagem);
             ManyToOne(x => x.Categoria, m =>
             {
+                m.Cascade(Cascade.Persist);
                 m.Column("IdCategoria");
+                m.Lazy(LazyRelation.NoLazy);
             });
 
         }

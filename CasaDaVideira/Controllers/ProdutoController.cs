@@ -48,6 +48,8 @@ namespace CasaDaVideira.Controllers
 
         public ActionResult GravarProduto(Produto prod)
         {
+            prod.Categoria = new Categoria();
+            prod.Imagem = String.Empty;
             DbConfig.Instance.ProdutoRepository.Salvar(prod);
             //return View("Telefones");
             return RedirectToAction("Index");

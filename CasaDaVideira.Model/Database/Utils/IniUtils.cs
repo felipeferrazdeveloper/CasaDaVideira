@@ -24,7 +24,7 @@ namespace CasaDaVideira.Model.Database.Utils
                 }
                 if (!System.IO.File.Exists(file))
                 {
-                    throw new Exception("Arquivo de configuração inexisten.");
+                    throw new Exception("Arquivo de configuração inexistente.");
                 }
 
                 var parser = new FileIniDataParser();
@@ -34,7 +34,7 @@ namespace CasaDaVideira.Model.Database.Utils
             }
             catch (Exception ex)
             {
-                throw new Exception("Não foi possivel ler o ini", ex);
+                throw new Exception("Não foi possivel ler o arquivo ini", ex);
             }
         }
     }

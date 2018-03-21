@@ -26,7 +26,7 @@ namespace CasaDaVideira.Model.Database.Model
             Bag<Produto>(x => x.Produtos, m =>
             {
                 m.Cascade(Cascade.All);
-                m.Key(k => k.Column("IdProduto"));
+                m.Key(k => k.Column("IdCategoria"));
                 m.Lazy(CollectionLazy.NoLazy);
                 m.Inverse(true);
             },

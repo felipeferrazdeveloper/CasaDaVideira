@@ -51,7 +51,6 @@ namespace CasaDaVideira.Model.Database.Model
             Property(x => x.Imagem);
             ManyToOne(x => x.Categoria, m =>
             {
-                m.Cascade(Cascade.Persist);
                 m.Column("IdCategoria");
                 m.Lazy(LazyRelation.NoLazy);
             });
